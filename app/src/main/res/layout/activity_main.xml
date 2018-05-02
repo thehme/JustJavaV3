@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.justjavav3.MainActivity">
+
+        <EditText
+            android:paddingTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:id="@+id/name_field"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toppings"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <CheckBox android:id="@+id/checkbox_whipped_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"
+            android:text="@string/whipped_cream" />
+
+        <CheckBox android:id="@+id/checkbox_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"
+            android:text="@string/chocolate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="16dp"
+            android:layout_marginLeft="16dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_decrement"
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:text="-"
+                android:onClick="decrement"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#000"
+                android:id="@+id/quantity_text_view" />
+
+            <Button
+                android:id="@+id/button_increment"
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:text="+"
+                android:onClick="increment"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_id"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/order"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="submitOrder"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
